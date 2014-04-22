@@ -64,6 +64,34 @@
 \frametitle{description of expressions, including operator precedences}
 \framesubtitle{}
  %CQ
+ %atems
+ %literals
+ \footnotesize
+ \begin{tabular}{l | l}
+ \textbf{Operators} 				& \textbf{Description}\\\hline
+ \texttt{lambda args: expression}		& anonymous function\\
+ \texttt{x or y} 				& logical or (lazy)\\
+ \texttt{x and y} 				& logical and (lazy)\\
+ \texttt{not x}					& locial negation\\
+ \texttt{x $<$ y, x $<=$ y, x $>$ y}		& comparison operators (value based)\\
+ \texttt{x $>=$ y, x == y, x $<>$ y, x!= y}	& \\
+ \texttt{x is y, x is not y}			& object identity \\
+ \texttt{x in y, x not in y} 			& sequence membership\\
+ \texttt{x \textbar y, x \^{} x, x \& y} 	& bitwise comparison\\
+ \texttt{x $<<$ y, x $>>$ y} 			& left/ right shift of x by y bits\\
+ \texttt{x + y, x - y} 				& addition/concatenation, substraction\\
+ \texttt{x * y, x \% y, x / y, x // y} 	& multiplication/ repetition, remainder/ format, division\\
+ \texttt{-x, +x, \~{}x, x ** y} 		& unary negation, identity, bitwise complement, binary power\\
+ \texttt{x[i], x[i:j], x.attr, x(\dots)} 	& indexing, slicing, qualification, function calls\\
+ \texttt{(\dots), [\dots], \{\dots\}, '\dots'} & Tuple, List, dictionary, string\\
+% \texttt{} & \\
+% \texttt{} & \\
+% \texttt{} & \\
+% \texttt{} & \\
+% \texttt{} & \\
+% \texttt{} & \\
+ \end{tabular}
+ 
 \end{frame}
 
 \begin{frame}
@@ -87,6 +115,17 @@
 
 
 %\begin{lstlisting}[language=Python]
+
+%http://interactivepython.org
+%http://xkcd.com/353/
+
+\begin{frame}
+ \frametitle{references}
+ \begin{itemize}
+  \item Mark Lutz. 2003. Learning Python (2 ed.). O'Reilly \& Associates, Inc., Sebastopol, CA, USA.
+  \item \href{http://interactivepython.org}{interactivepython.org}
+ \end{itemize}
+\end{frame}
 
 
 \end{document}
