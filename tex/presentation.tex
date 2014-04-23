@@ -56,11 +56,56 @@
 \end{frame}
 
 \begin{frame}
-\frametitle{compilation model}
-\framesubtitle{}
+\frametitle{Running Python Code}
+\begin{itemize}
+\item Interpreter Vs Compiler
+
+\item What happens when you execute a line of code in your python REPL?
+	\begin{figure}
+	\includegraphics[width=10cm]	{Interpreter.png}
+	\end{figure}
+\item There are four steps that python takes when you hit return:
+	\begin{itemize}
+	
+	\item lexing
+	\item parsing
+	\item compiling and 
+	\item interpreting
+	\end{itemize}
+\end{itemize}
+
   
 \end{frame}
 
+
+\begin{frame}
+\frametitle{Compiling Python Code}
+Source Code is Compiled to some kind of byte code and executed by a virtual machine
+\begin{itemize}
+\item Cpython: Source Code -  Python byte code
+	\begin{itemize}
+	\item VM written in C, standard implementation
+	\end{itemize}
+\item Jython: Source Code - Java byte code
+	\begin{itemize}
+	\item JVM as runtime environment
+	\end{itemize}
+\item IronPython: Source Code - IL (".NET") byte code
+	\begin{itemize}
+	\item CLR as runtime environment
+	\end{itemize}
+\end{itemize}
+
+  
+\end{frame}
+
+\begin{frame}
+\frametitle{CPython Interpreter and Compiling}
+	\begin{figure}
+	\includegraphics[width=12cm]{Cpython.png}
+	\end{figure}
+
+\end{frame}
 \begin{frame}
 \frametitle{complete list of primitive data types}
 \framesubtitle{}
@@ -112,16 +157,17 @@
 \begin{frame}
 \frametitle{list of control flow constructs, including small examples}
 \framesubtitle{}
-if, elif and else statements
-Syntax : if option 1 Condition :
-            ....
-         elif option 2 Condition :
-            ....
-         else :
-            .... default choice   
-
-for loop
-Syntax : for iterator_name in iterating_sequence :
+%
+%if, elif and else statements
+%Syntax : if option 1 Condition :
+%            ....
+%         elif option 2 Condition :
+ %           ....
+%         else :
+%            .... default choice   
+%
+%for loop
+%Syntax : for iterator_name in iterating_sequence :
                statements
                ...
 while loop
