@@ -11,7 +11,7 @@
 
 \begin{document}
 
-\title{Python}
+\title{Python 2.7.6}
 \subtitle{}
 \author{
   Mallick, Arka\\
@@ -49,8 +49,8 @@
  \begin{figure}
  \center
  %file is copyrigted
- %\includegraphics[width=5cm]{images/python.png}
- %\caption{\href{http://xkcd.com/353/}{xkcd.com/353/}}
+ \includegraphics[width=5cm]{img/python.png}
+ \caption{\href{http://xkcd.com/353/}{xkcd.com/353/}}
 \end{figure}
  
 \end{frame}
@@ -117,13 +117,12 @@ Source Code is Compiled to some kind of byte code and executed by a virtual mach
 \frametitle{description of expressions}
 \framesubtitle{from lowest to highest precedence}
  %CQ
- %atems
- %literals
  \scriptsize
  \begin{tabular}{l | l}
  \textbf{Operators} 				& \textbf{Description}\\\hline
  \texttt{lambda args: expression}		& anonymous function\\
  \texttt{if x:, else:}				& (operational precedence only)\\
+ 
  \texttt{x or y} 				& logical or (lazy)\\
  \texttt{x and y} 				& logical and (lazy)\\
  \texttt{not x}					& locial negation\\
@@ -131,14 +130,26 @@ Source Code is Compiled to some kind of byte code and executed by a virtual mach
  \texttt{x $>=$ y, x == y, x $<>$ y, x!= y}	& \\
  \texttt{x is y, x is not y}			& object identity \\
  \texttt{x in y, x not in y} 			& sequence membership\\
+ 
  \texttt{x \textbar y, x \^{} x, x \& y} 	& bitwise comparison\\
  \texttt{x $<<$ y, x $>>$ y} 			& left/ right shift of x by y bits\\
+ 
  \texttt{x + y, x - y} 				& add/concat, substract\\
  \texttt{x * y, x \% y, x / y, x // y} 	& multiply/ repeate, remainder/ format, division\\
+ 
  \texttt{-x, +x, \~{}x, x ** y} 		& unary negation, identity\\
 						& bitwise complement, binary power\\
+ 
  \texttt{x[i], x[i:j], x.attr, x(\dots)} 	& indexing, slicing, qualification, function calls\\
  \texttt{(\dots), [\dots], \{\dots\}, '\dots'} & tuple, list, dictionary, string\\
+ 
+ %left to right if two functions have the same precedence
+ % except ** | 2 ** 2 ** 2 ** 2 = 65536
+ % 3 < 4 < True ==  (3<4)and(4 < True)
+ % x = 1
+ % y = x = 2
+ % '1' in '11' == True
+ % The if/else expression is an expression, but assignment is a statement
 
  \end{tabular}
 \end{frame}
@@ -213,6 +224,7 @@ In python, exceptions are triggered automatically on errors. It can also be both
  \frametitle{references}
  \begin{itemize}
   \item Mark Lutz. 2003. Learning Python (2 ed.). O'Reilly \& Associates, Inc., Sebastopol, CA, USA.
+  \item \href{https://docs.python.org/2.7/}{docs.python.org/2.7/}
   \item \href{http://interactivepython.org}{interactivepython.org}
  \end{itemize}
 \end{frame}
