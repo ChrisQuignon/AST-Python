@@ -157,23 +157,29 @@ Source Code is Compiled to some kind of byte code and executed by a virtual mach
  \end{tabular}
 \end{frame}
  
-
-\begin{frame}
+\begin{frame}[fragile] % Need to use the fragile option when verbatim is used in the slide
 \frametitle{list of control flow constructs, including small examples}
-\framesubtitle{}
-
+\begin{example}
+\begin{verbatim}
 if, elif and else statements
 Syntax : if option 1 Condition :
             ....
          elif option 2 Condition :
-           ....
+            ....
          else :
             .... default choice   
-
 for loop
-Syntax : for iterator\_name in iterating\_sequence :
+Syntax : for iterator_name in iterating_sequence :
                statements
                ...
+\end{verbatim}
+\end{example}  
+\end{frame}  
+          
+\begin{frame}[fragile] % Need to use the fragile option when verbatim is used in the slide
+\frametitle{list of control flow constructs, including small examples}
+\begin{example}
+\begin{verbatim}
 while loop
 Syntax : While Condition :
             statements 
@@ -182,6 +188,9 @@ pass, break and continue
 pass - used for the sake of syntactical correctness
 continue - to continue to next iteration without doing anything to the loop.
 break - to terminate the loop
+
+\end{verbatim}
+\end{example}
 \end{frame}
 
 \begin{frame}
