@@ -103,6 +103,7 @@ Source Code is Compiled to some kind of byte code and executed by a virtual mach
 \frametitle{CPython Interpreter and Compiling}
 	\begin{figure}
 	\includegraphics[width=12cm]{Cpython.png}
+	\caption{\href{http://www.troeger.eu/files/teaching/pythonvm08.pdf}{CPython}}
 	\end{figure}
 
 \end{frame}
@@ -170,8 +171,28 @@ break - to terminate the loop
 \end{frame}
 
 \begin{frame}
-\frametitle{exception handling}
-\framesubtitle{}
+\frametitle{Exception Handling}
+\framesubtitle{Basics}
+Events that can modify the flow of control through a program.
+In python, exceptions are triggered automatically on errors. It can also be both triggered and intercepted from the code. They are processed by three statements which has two variations:
+\begin{itemize}
+\item try/except
+	\begin{itemize}
+	\item Catch and recover from exceptions raised by python, or by user
+	\end{itemize}
+\item try/finally
+	\begin{itemize}
+	\item Perform cleanup actions wheter exceptions occur or not.
+	\end{itemize}
+\item raise
+	\begin{itemize}
+	\item Trigger an exception manually in your code.
+	\end{itemize}
+\item assert
+	\begin{itemize}
+	\item Conditionally trigger an exception in your code.
+	\end{itemize}
+\end{itemize}
   
 \end{frame}
 
