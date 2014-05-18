@@ -9,6 +9,8 @@
 \usepackage{caption}
 \usepackage{hyperref}
 \usepackage{color}
+\usepackage{minted}
+
 
 %Python
 \definecolor{keywords}{RGB}{255,0,90}
@@ -76,14 +78,158 @@
 
 %DEBUL
 \begin{frame}[fragile]
-\frametitle{non-primitive data types: vectors, arrays, lists, enumerations, sets, maps, trees, graphs}
+\frametitle{non-primitive data types}
+\begin{itemize}
+	\item Lists
+	\item Tuples and Sequences
+	\item Sets
+	\item Dictionaries
+	\item Looping Techniques
+\end{itemize}
 \framesubtitle{}
 
 \end{frame}
 
 %DEBUL
 \begin{frame}[fragile]
-\frametitle{generic data types}
+\frametitle{Non-Primitive Data Types}
+\framesubtitle{Lists}
+\begin{itemize}
+	\item list.append(x)
+		\begin{itemize}
+		\item Add an item to the end of the list;
+		\end{itemize}
+	\item list.extend(L)
+		\begin{itemize}
+		\item Extend the list by appending all the items in the given list; 		\end{itemize}
+
+	\item list.insert(i, x)
+		\begin{itemize}
+		\item Insert an item at a given position. The first argument is the 				index of the element before which to insert
+		\end{itemize}
+
+	\item list.remove(x)
+		\begin{itemize}
+		\item Remove the first item from the list whose value is x. It is an 				error if there is no such item.
+		\end{itemize}
+
+	\item list.pop([i])
+		\begin{itemize}
+		\item 	Remove the item at the given position in the list, and 					return it. If no index is specified, a.pop() removes and 					returns the last item in the list. 
+		\end{itemize}
+
+\end{itemize}
+
+
+\end{frame}
+
+%DEBUL
+\begin{frame}[fragile]
+\frametitle{Non-Primitive Data Types}
+\framesubtitle{Lists}
+\begin{itemize}
+	\item list.index(x)
+		\begin{itemize}
+		\item Return the index in the list of the first item whose value is x. It is an error if there is no such item.
+		\end{itemize}
+
+	\item list.count(x)
+		\begin{itemize}
+		\item Return the number of times x appears in the list.
+		\end{itemize}
+
+	\item list.sort()
+		\begin{itemize}
+		\item Sort the items of the list, in place.
+		\end{itemize}
+	
+	\item list.reverse()
+		\begin{itemize}
+		\item Reverse the elements of the list, in place.
+		\end{itemize}
+\end{itemize}
+
+
+\end{frame}
+
+%DEBUL
+\begin{frame}[fragile]
+\frametitle{Non-Primitive Data Types}
+\framesubtitle{Set}
+A set object is an unordered collection of distinct hashable objects. Common uses include membership testing, removing duplicates from a sequence, and computing mathematical operations such as intersection, union, difference, and symmetric difference
+\begin{itemize}
+	\item add(elem)
+		\begin{itemize}
+		\item Add element elem to the set.
+		\end{itemize}
+
+	\item remove(elem)
+		\begin{itemize}
+		\item Remove element elem from the set. Raises KeyError if elem is not contained in the set.
+		\end{itemize}
+
+	\item discard(elem)
+		\begin{itemize}
+		\item Remove element elem from the set if it is present.
+		\end{itemize}
+	
+	\item pop()
+		\begin{itemize}
+		\item Remove and return an arbitrary element from the set. Raises KeyError if the set is empty.
+		\end{itemize}
+		
+	\item clear()
+		\begin{itemize}
+		\item Remove all elements from the set
+		\end{itemize}
+\end{itemize}
+
+
+\end{frame}
+
+
+%DEBUL
+\begin{frame}[fragile]
+\frametitle{Non-Primitive Data Types}
+\framesubtitle{Dictionary}
+
+\begin{itemize}
+	\item Dictionaries are indexed by keys, which can be any immutable type
+		\begin{itemize}
+		\item Strings and numbers can always be keys. 
+		\item Tuples can be used as keys if they contain only strings, numbers, or tuples
+		\item If a tuple contains any mutable object either directly or indirectly, it cannot be used as a key
+		\item You can’t use lists as keys, since lists can be modified in place using index assignments, slice assignments, or methods like append() and extend().
+		\end{itemize}
+
+	\item Dictionary is an unordered set of key: value pairs, with the requirement that the keys are unique (within one dictionary).
+		
+
+	\item The main operations on a dictionary are storing a value with some key and extracting the value given the key.
+		
+	
+		
+\end{itemize}
+
+
+\end{frame}
+%DEBUL
+\begin{frame}[fragile]
+\frametitle{Generic data types}
+Python is a dynamically typed language, so it doesn't need generics. It can do something like this
+
+\begin{verbatim}
+	class BinaryTree:
+    def __init__(self, left, right):
+        self.left, self.right = left, right
+\end{verbatim}
+And it could be used like this:
+\begin{verbatim}
+	branch1 = BinaryTree(1,2)
+	myitem = MyClass()
+	branch2 = BinaryTree(myitem, None)
+	tree = BinaryTree(branch1, branch2)
+\end{verbatim}
 \framesubtitle{}
 
 \end{frame}
@@ -96,7 +242,7 @@
 %  \item \href{http://interactivepython.org}{interactivepython.org}
 % \end{itemize}
 %\end{frame}
-
+	
 
 %COPY AND PASTE FROM HERE
 
