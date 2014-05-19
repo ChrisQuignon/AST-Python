@@ -9,6 +9,7 @@
 \usepackage{caption}
 \usepackage{hyperref}
 \usepackage{color}
+\usepackage{ulem}
 %\usepackage{minted}
 
 
@@ -107,16 +108,78 @@
 
 %CHRIS
 \begin{frame}[fragile]
-\frametitle{methods, arguments lists, return types, modifiers, variable arity methods, defaults}
-\framesubtitle{}
+\frametitle{Types and \sout{Modifiers}}
+No explicit typing, no hiding.\\
+\huge \begin{quote}We are all consenting adults\end{quote}
+\scriptsize \href{http://docs.python-guide.org/en/latest/writing/style/}{docs.python-guide.org/en/latest/writing/style}\\
+\normalsize
+\hbox{}
+In Python all variables have a type.\\
+The type is determined at runtime.\\
+\hbox{}
+\hbox{}
+\hbox{}
+\hfill Just in case...
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Methods and Arguments }
+
+\begin{verbatim}
+def f( p, keyword='default', *positional, **optional):
+  ...
+\end{verbatim}
+
+\begin{verbatim}classname.method(arguments)\end{verbatim}
+\hbox{}
+Arguments may be specified
+\begin{itemize}
+	\item positional
+	\item keyworded
+	\item default
+	\item optional (as a dict)
+	\item with arity 
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}[fragile]
+\frametitle{Return, Assign and Polymorphism}%lists, return types, modifiers, variable arity methods, defaults
+Return and assign works just like variable handling:
+\begin{itemize}
+	\item any types
+	\item arbitrary many as tuple
+	\item mangle
+	\item polymorphism for free
+\end{itemize}
+\hbox{}
+Convention and syntactic sugar:
+\begin{itemize}
+	\item pass
+	\item \_ (be careful)
+\end{itemize}
 
 \end{frame}
 
-%ARKA
 \begin{frame}[fragile]
-\frametitle{inheritance and overriding, polymorphism}
-\framesubtitle{}
+\frametitle{Inheritance and Overriding}
+Classes can inherit from multiple other classes and thereby inherit their functions.
 
+\begin{quote}
+\begin{verbatim}
+class DerivedClassName(BaseClassName):
+\end{verbatim}\end{quote}
+\hbox{}
+
+magic methods overwrite these expressions/methods:
+\begin{itemize}
+	\item \_\_init\_\_
+	\item \_\_lt\_\_
+	\item \_\_iter\_\_
+	\item \dots
+\end{itemize}
+$\rightarrow$ \href{http://www.rafekettler.com/magicmethods.html}{rafekettler.com/magicmethods}
 \end{frame}
 
 %DEBUL
