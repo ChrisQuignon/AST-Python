@@ -49,20 +49,49 @@
 \titlepage
 \end{frame}
 
+
 \begin{frame}[fragile]
 \frametitle{How to use the "keyword arguments"?}
+By input order.
+\begin{lstlisting}[language=Python]
+def foo(*positional, **keywords):
+    print "Positional:", positional
+    print "Keywords:", keywords
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+foo('one','two',c='three',d='four')
+Positional: ('one', 'two')
+Keywords: {'c': 'three', 'd': 'four'}
+\end{lstlisting}
+\begin{lstlisting}[language=Python]
+ foo(a='one', b='two', 'three', 'four')
+SyntaxError: non-keyword arg after keyword arg
+\end{lstlisting}
+\hbox{}
+\hbox{}
+\scriptsize
+\hfill{}\href{http://stackoverflow.com/questions/1419046/}{stackoverflow.com/questions/1419046/}
 
 \end{frame}
+
 
 \begin{frame}[fragile]
-\frametitle{How does "sort" work for a list with different data types?}
+\frametitle{Non-primitive data types.}
 
 \end{frame}
 
-\begin{frame}[fragile]
-\frametitle{What are hashable and non-hashable objects?}
 
-\end{frame}
+%\begin{frame}[fragile]
+%\framtitle{How does "sort" work for a list with different data types?}
+
+%\end{frame}
+
+
+%\begin{frame}[fragile]
+%\framtitle{What are hashable and non-hashable objects?}
+
+%\end{frame}
 
 %\begin{frame}
 % \frametitle{references}
