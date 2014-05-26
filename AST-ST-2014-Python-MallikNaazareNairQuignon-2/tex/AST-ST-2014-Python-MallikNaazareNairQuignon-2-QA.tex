@@ -77,12 +77,6 @@ SyntaxError: non-keyword arg after keyword arg
 
 
 \begin{frame}[fragile]
-\frametitle{Non-primitive data types.}
-
-\end{frame}
-
-
-\begin{frame}[fragile]
 \frametitle{How does "sort" work for a list with different data types?}
 
 \end{frame}
@@ -95,6 +89,30 @@ SyntaxError: non-keyword arg after keyword arg
 
 \begin{frame}[fragile]
 \frametitle{Non-primitive data types}
+\begin{itemize}
+	\item Non-primitive data types are not defined by the programming language, but are instead created by the programmer. They are sometimes called "reference variables," or "object references," since they reference a memory location, which stores the data. 
+While an object may contain any type of data, 
+the information referenced by the object may still be stored as a primitive data type.
+	\item The fact that there is a non-primitive data-type implicites that their acutal values lie in the Heap, and there's only a reference to them in the runtime-stack. 
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Non-primitive data types}
+Example of Non-Primitive data types:
+\begin{enumerate}
+	\item \href{http://www.python-course.eu/sequential_data_types.php}{Sequential Data Types}
+	  \begin{enumerate}
+	    \item String
+	    \item Lists
+	    \item Tuples
+	  \end{enumerate}
+	\item \href{http://www.python-course.eu/dictionaries.php}{Dictionaries}
+	\item \href{http://www.python-course.eu/sets_frozensets.php}{Sets and Frozensets}\ldots
+
+\end{enumerate}
+
 \end{frame}
 
 %\begin{frame}
