@@ -78,7 +78,10 @@ SyntaxError: non-keyword arg after keyword arg
 
 \begin{frame}[fragile]
 \frametitle{How does "sort" work for a list with different data types?}
-
+\begin{quote}
+Objects of different types, except different numeric types and different string types, never compare equal; such objects are ordered consistently but arbitrarily (so that sorting a heterogeneous array yields a consistent result). Furthermore, some types (for example, file objects) support only a degenerate notion of comparison where any two objects of that type are unequal. Again, such objects are ordered arbitrarily but consistently. The \textless, \textless=, \textgreater and \textgreater= operators will raise a TypeError exception when any operand is a complex number.
+\end{quote}
+\href{https://docs.python.org/2/library/stdtypes.html}{docs.python.org/2/library/stdtypes.html}
 \end{frame}
 
 
