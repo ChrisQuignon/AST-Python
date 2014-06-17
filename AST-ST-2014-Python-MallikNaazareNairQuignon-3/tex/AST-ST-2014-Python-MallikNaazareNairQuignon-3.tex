@@ -2,8 +2,8 @@
 \usetheme{Pittsburgh}
 
 \usepackage[utf8]{inputenc}
-\usepackage{default}
 \usepackage[procnames]{listings}
+\usepackage{listings}
 \usepackage{graphicx}
 %\usepackage[toc,page]{appendix}
 \usepackage{caption}
@@ -27,14 +27,16 @@
     breaklines=true,
     columns=fullflexible,
     %Numbering and Tabs
-    tabsize=4,
-    showspaces=false,
-    showstringspaces=false}
+    %numbers=left,
+    %tabsize=4,
+    %showspaces=false,
+    %showstringspaces=false
+    }
 
 \begin{document}
 
 \title{Python 2.7.6}
-\subtitle{Object-Oriented Programming Concepts, Non-Primitive Data Types, and Generics}
+\subtitle{Threading and Networking}
 \author{
   Mallick, Arka\\
   Naazare, Menaka \\
@@ -44,10 +46,26 @@
 \institute{Hochschule Bonn Rhein Sieg}
 \date{\today}
 
+\begin{frame}
+\titlepage
+\end{frame}
 
 %Chris
 \begin{frame}[fragile]
 \frametitle{Threads and Processes}
+Threads are used to have multiple parts of your programm running in prallel. It does not mean that those thread will leave the CPU and thus decrease execution time.
+
+
+\begin{lstlisting}[language=Python]
+import threading
+
+	from multiprocessing import Process
+
+    p = Process(target=function, args="none")
+    p.start()
+    p.join()
+\end{lstlisting}
+
 
 \end{frame}
 
@@ -66,7 +84,7 @@
 \end{frame}
 
 
-%Menaka
+%Deebul
 \begin{frame}[fragile]
 \frametitle{Inter-Process Communication and Networking}
 
@@ -94,7 +112,7 @@
 %#PYTHON CODE HERE
 %\end{lstlisting}
 
-%\lstinputlisting[Language=Python]{ }
+%\lstinputlisting{ }[Language=Python]
 
 %\begin{figure}
 % \center
