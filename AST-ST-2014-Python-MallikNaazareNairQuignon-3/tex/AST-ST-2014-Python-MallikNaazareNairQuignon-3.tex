@@ -52,21 +52,32 @@
 
 %Chris
 \begin{frame}[fragile]
-\frametitle{Threads and Processes}
-Threads are used to have multiple parts of your programm running in prallel. It does not mean that those thread will leave the CPU and thus decrease execution time.
+\frametitle{Thread}
+Withs thread, multiple parts of the program can run interleaved. Threads are linked to their programm and share memory and state with it.
+The threads will not leave the CPU and thus will not decrease the runtime of your program. But are executed in "parallel" (more correct: interleaved).
 
 
 \begin{lstlisting}[language=Python]
 import threading
 
-	from multiprocessing import Process
+thread.start_new_thread(function, args[, kwargs])
 
-    p = Process(target=function, args="none")
-    p.start()
-    p.join()
+lock.acquire([waitflag])
+lock.release()
 \end{lstlisting}
+\end{frame}
 
+\begin{frame}[fragile]
+\frametitle{Processes}
+A process is an own instance of a programm. They are totally independent and thus can exploit multiple CPUs. They can may communicate. 
 
+\begin{lstlisting}[language=Python]
+from multiprocessing import Process
+
+p = Process(target=function, args="none")
+p.start()
+p.join()
+\end{lstlisting}
 \end{frame}
 
 
@@ -90,14 +101,14 @@ import threading
 
 \end{frame}
 
-%\begin{frame}
-% \frametitle{references}
-% \begin{itemize}
-%  \item Mark Lutz. 2003. Learning Python (2 ed.). O'Reilly \& Associates, Inc., Sebastopol, CA, USA.
-%  \item \href{https://docs.python.org/2.7/}{docs.python.org/2.7/}
-%  \item \href{http://interactivepython.org}{interactivepython.org}
-% \end{itemize}
-%\end{frame}
+\begin{frame}
+ \frametitle{references}
+ \begin{itemize}
+  \item Mark Lutz. 2001. Programming Python (2 ed.). O'Reilly \& Associates, Inc., Sebastopol, CA, USA.
+  \item \href{https://docs.python.org/2.7/}{docs.python.org/2.7/}
+  \item \href{http://en.wikibooks.org/wiki/Python_Programming/Threadingfrom}{en.wikibooks.org/wiki/Python\_Programming/Threadingfrom}
+ \end{itemize}
+\end{frame}
 	
 
 %COPY AND PASTE FROM HERE
