@@ -105,8 +105,8 @@ So, How is it done in python? \\
  \item Lock
  \item Rlocks
  \item Semaphores
- \item Conditions
  \item Events
+ \item Conditions
  \item Queues
 \end{enumerate}
 \end{frame}
